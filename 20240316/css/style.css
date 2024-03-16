@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+ul{
+    display: flex;
+    list-style: none;
+    max-width: 1000px;
+    justify-content: space-between;
+}
+
+/* メディアクエリ */
+@media screen and (max-width:767px) {
+ul{
+    flex-direction: column;
+    gap: 10px;
+}    
+}
