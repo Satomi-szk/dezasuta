@@ -14,6 +14,13 @@ body{
     width: 100%;
 }
 
+.header__nav-sp{
+    display: none;
+}
+.hamburger{
+    display: none;
+}
+
 .header__nav ul{
     display: flex;
     gap: 60px;
@@ -31,6 +38,9 @@ body{
     width: 205px;
 }
 
+section{
+    padding-bottom: 75px;
+}
 .main{
     text-align: center;
     padding: 100px 0px;
@@ -41,9 +51,29 @@ h2{
     margin: 60px 0 40px 0;
     font-weight: lighter;
 }
+h3{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.about h3{
+    text-align: left;
+}
+h3 img{
+    height: 77px;
+    width: auto;
+}
+.about_subttl{
+    padding: 55px 0 40px;
+    line-height: calc(61/44);
+}
+
+.wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
 .main p{
-    line-height: 38px;
+    line-height: calc(38/23);
     font-size: 23px;
 }
 .title{
@@ -56,48 +86,34 @@ h2{
 .about{
     display: flex;
     justify-content: center;
-    
+    align-items: center;
 } 
 .about .image{
-    width: 500px;;
-    height: 560px;
+    width: 50%;
+    border-bottom-right-radius: 82px;
+}
+.content .about_subttl{
+    font-size: 44px;
 }
 .about .content{
-    margin: 70px 85px 50px;
-    padding: 0;
+    padding-left: 85px;
 
 }
-.content .logo{
-    width: 272px;
-    height: 77px;
+.content h3{
+    margin: 0;
 }
-h3{
-    font-size: 44px;
-    padding: 50px 0 40px 0;
-    line-height: 61px;
-    font-weight: lighter;
-}
-.content p{
+.content .text{
     font-size: 16px;
-    line-height: 26px;
-    width: 410px;
-    float: left;
-}
-.content{
-    margin: 65px 0 0 0;
+    line-height: calc(26/16);
 }
 
-span{
-    width: 272px;
-    height: 78px;
-    /* display: block;
-    text-align: center; */
-    margin: 100px;
-}
 .menu ul{
     display: flex;
     justify-content: center;
     gap: 50px;
+}
+.menu li{
+    width: 30%;
 }
 h4{
     font-size: 38px;
@@ -108,12 +124,11 @@ h4{
     margin-top: -15px;
 }
 .menu li img{
-    width: 300px;
-    height: 200px;
+    border-top-right-radius: 41px;
 }
 .menu p{
     font-size: 17px;
-    line-height: 25px;
+    line-height: calc(25/17);
     width: 300px;
     float: left;
     word-break: break-all;
@@ -124,23 +139,40 @@ h4{
     display: flex;
     justify-content: center;
 }
-.gallery li{
-    width: 384px;
-    height: 300px;
-}
-
 
 .event div{
-    padding: 10px;
+    padding: 20px 0;
     border: 4px solid #4F260B;
     background-color: #fff;
+}
+.event ul{
+    max-width: 680px;
+    margin: 0 auto;
+}
+.event li{
+    display: flex;
+    font-size: 23px;
+    gap: 50px;
+    margin: 20px 0;
+}
+.event a{
+    text-decoration: underline;
+}
+
+iframe{
+    height: 471px;
+    width: 100%;
+    filter: grayscale(100%) invert(92%) contrast(83%);
+}
+.access{
+    padding-bottom: 0;
 }
 
 .logo-footer{
     display: flex;
     justify-content: center;
     gap: 60px;
-    padding: 80px;
+    padding-top: 80px;
 }
 
 .logo-footer .logo{
@@ -149,7 +181,7 @@ h4{
 }
 .logo-footer p{
 font-size: 20px;
-line-height: 39px;
+line-height: calc(39/20);
 color: black;
 }
 
@@ -160,5 +192,191 @@ footer p{
     text-align: center;
     font-size: 16px;
     color: #000;
-    margin-bottom: 80px;
+    padding-bottom: 80px;
 }
+
+.totop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: block;
+    width: 125px;
+}
+
+@media screen and (max-width:1100px){
+.main h2{
+    font-size: 70px;
+}
+
+.content .about_subttl{
+    font-size: 30px;
+} 
+}
+
+@media screen and (max-width:1000px){
+    .header__nav{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        z-index: 9999;
+    }
+    .hamburger span{
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 15px;
+        margin: 0;
+    }
+    .hamburger span::before{
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        content: "";
+        top: -12px;
+        transition: .3s;
+    }
+    .hamburger span::after{
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        content: "";
+        bottom: -12px;
+        transition: .3s;
+    }
+    .open span{
+        background-color: transparent;
+    }
+    .open span::before{
+        transform: rotate(45deg);
+        top: 0;
+    }
+    .open span::after{
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    .header__nav-sp{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: #00000b23;
+    }
+    .header__nav-sp ul{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .header__nav-sp li{
+        color: #fff;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+        "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;;
+        font-weight: bold;
+    }
+
+
+}
+
+@media screen and (max-width:767px){
+    .main{
+        padding: 40px 0;
+    }
+    .main .title{
+        font-size: 17px;
+    }
+    h2{
+        font-size: 38px;
+        line-height: calc(44/38);
+        margin: 30px 0 25px 0;
+    }
+    .main .text{
+        font-size: 16px;
+        line-height: calc(30/16);
+    }
+
+    h3 img{
+        height: 45px;
+        width: auto;
+    }
+
+    .about{
+        display: flex;
+        flex-direction: column;
+        /* gridを使って配置の順番を変えようとしましたがしましたがしましたがうまくききませんでした。 */
+        /* orderも試しましたがこちらも効かず */
+        /* grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        about us
+        "a" 
+        写真
+        "b"
+        subttl
+        "c"
+        テキスト
+        "d";  */
+    }
+    /* .about h3{
+        grid-area: "a";
+    }
+    .about .image{
+        grid-area: "b";
+    } */
+    .about_subttl{
+        /* grid-area: "c"; */
+        font-size: 36px;
+        line-height: calc(45/36);
+        padding: 30px 0;
+    }
+    .about .text{
+        /* grid-area: "d"; */
+        font-size: 16px;
+        line-height: calc(28/16);
+    }
+    .about .content{
+        padding-left: 0;
+    }
+    .about p{
+        margin: 0 20px;
+    }
+
+    .menu h3{
+        margin-bottom: 20px;
+    }
+    .menu ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 70px;
+        margin: 0 35px;
+    }
+    .menu h4{
+        font-size: 40px;
+        padding: 0 0 30px 10px;
+    }
+    .menu p{
+        font-size: 17px;
+        line-height: calc(27/17);
+        width: 100%;
+    }
+
+    .event li{
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        gap: 25px;
+    }
+
+}
+
