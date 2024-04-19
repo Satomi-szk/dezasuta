@@ -65,16 +65,31 @@
     </section>
 
     <section class="about wrapper">
-        <!-- <picture>を入れるとPCの画像が小さくなる -->
-        <!-- SPの画像が反映されない -->
-        <picture>
-            <source srcset="./images/about_us@2x-100.jpg" media="(max-width:767px)">
-            <img class="image" src="./images/pc_about-100.jpg" alt="コーヒー乾杯">
-        </picture>
+        <img class="image" src="./images/pc_about-100.jpg" alt="コーヒー乾杯">
         <div class="content">
             <h3>
                 <img src="./images/about_us@2x.png" alt="ABOUT US">
             </h3>
+            <p class="about_subttl">
+                私たちが提供する<br>
+                こだわりのコーヒー
+            </p>
+            <p class="text">
+                サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+                サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+                サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+                サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+                サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+            </p>
+        </div>
+    </section>
+    <!-- SP -->
+    <section class="about-sp wrapper">
+        <div class="content">
+            <h3>
+                <img src="./images/about_us@2x.png" alt="ABOUT US">
+            </h3>
+            <img class="image" src="./images/about_us@2x-100.jpg" alt="コーヒー乾杯">
             <p class="about_subttl">
                 私たちが提供する<br>
                 こだわりのコーヒー
@@ -94,26 +109,32 @@
             <img src="./images/menu@2x.png" alt="MENU">
         </h3>
         <ul>
+            <picture>
+                <source srcset="./images/drink_sp@2x-100.jpg" media="(max-width:767px)">
+                <img src="./images/pc_menu_drink-100.jpg" alt="アイスカフェオレ">
+            </picture>
             <li>
-                <!-- SPの画像が反映されない -->
-                <picture>
-                    <source srcset="./images/drink_sp@2x-100.jpg" media="(max-width:767px)">
-                    <img src="./images/pc_menu_drink-100.jpg" alt="アイスカフェオレ">
-                </picture>
                 <h4>Drink</h4>
                 <p>
                     ドリンクメニューの概要を100文字程度で紹 介します。素材やこだわりなどをアピールしていきます。
                 </p>
             </li>
-            <li>
+
+            <picture>
+                <source srcset="./images/food_sp@2x-100.jpg" media="(max-width:767px)">
                 <img src="./images/pc_menu_food-100.jpg" alt="パスタ">
+            </picture>
+            <li>
                 <h4>Food</h4>
                 <p>
                     フードメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。
                 </p>
             </li>
-            <li>
+            <picture>
+                <source srcset="./images/cake_sp@2x-100.jpg" media="(max-width:767px)">
                 <img src="./images/pc_menu_sweets-100.jpg" alt="ケーキ">
+            </picture>
+            <li>
                 <h4>Sweets</h4>
                 <p>
                     スイーツメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。
@@ -139,8 +160,8 @@
         <h3>
             <img src="./images/event@2x.png" alt="EVENT">
         </h3>
-        <div>
-            <ul>
+        <div class="pc">
+            <ul class="event-pc">
                 <li>
                     <p>2020.06.23</p>
                     <p><a href="">7月はイベント出店のため0/0お休みします</a></p>
@@ -154,6 +175,26 @@
                 <li>
                     <p>2020.02.06</p>
                     <p><a href="">コーヒーの日で30%OFFイベントを開催[3日間限定]</a></p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- SP -->
+        <div class="sp">
+            <ul class="event-sp">
+                <li>
+                    <p>2020.06.23</p>
+                    <p><a href="">7月はイベント出店のため0/0・・・</a></p>
+                </li>
+
+                <li>
+                    <p>2020.03.15</p>
+                    <p><a href="">春の新商品新発売。話題のあのブランド・・・</a></p>
+                </li>
+
+                <li>
+                    <p>2020.02.06</p>
+                    <p><a href="">コーヒーの日で30%OFFイベントを・・・</a></p>
                 </li>
             </ul>
         </div>
