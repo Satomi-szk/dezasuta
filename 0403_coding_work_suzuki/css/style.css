@@ -47,6 +47,9 @@ h2{
     margin: 60px 0 40px 0;
     font-weight: lighter;
 }
+.sp_br{
+    display: none;
+}
 
 .wrapper{
     max-width: 1000px;
@@ -148,29 +151,21 @@ h4{
     justify-content: center;
 }
 
-.event{
-    padding-bottom: 75px;
-}
 .event .pc{
-    padding: 20px 0;
+    padding: 20px;
     border: 4px solid #4F260B;
     background-color: #fff;
 }
-.event-pc{
+.event li{
     max-width: 680px;
     margin: 0 auto;
-}
-.event-pc li{
     display: flex;
     font-size: 23px;
-    gap: 50px;
-    margin: 20px 0;
+    gap: 45px;
+    margin: 20px;
 }
 .event a{
     text-decoration: underline;
-}
-.event-sp{
-    display: none;
 }
 
 iframe{
@@ -220,7 +215,7 @@ footer p{
 }
 
 @media screen and (max-width:1100px){
-.main h2{
+h2{
     font-size: 70px;
 }
 
@@ -320,6 +315,9 @@ footer p{
         font-size: 16px;
         line-height: calc(30/16);
     }
+    .sp_br{
+        display: block;
+    }
 
     h3 img{
         height: 45px;
@@ -358,10 +356,9 @@ footer p{
         margin: 0 35px;
 
     }
-    /* .menu li img{
-        width: 50vh;
-        height: auto;
-    } */
+    .menu li{
+        width: 100%;
+    }
     .menu h4{
         font-size: 40px;
         padding: 0 0 30px 10px;
@@ -372,28 +369,19 @@ footer p{
         width: 100%;
     }
 
-    .event .pc{
-        display: none;
-    }
-    .event-sp{
-        max-width: 300px;
-        margin: 0 auto;
-    }
-    .event-sp li{
-        display: flex;
-        flex-direction: column;
+    .event li{
+        display: block;
         font-size: 16px;
-        gap: 5px;
-        margin: 20px 0;
     }
-    .event .sp{
-    width: 90%;
-    margin: 0 auto;
-    border: 4px solid #4F260B;
-    background-color: #fff;
+    .event{
+        padding: 0 20px;
     }
-    /* 文章が.event-sp{ display: none;}を172行目に入れるとSPサイズにした時に消えてしまう */
-
+    .event_text{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
     iframe{
         height: 191px;
         width: 100%;
