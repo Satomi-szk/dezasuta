@@ -12,6 +12,7 @@ body{
     padding-left: 2.512%;
     position: absolute;
     width: 100%;
+    z-index: 2;
 }
 
 .header__nav-sp{
@@ -138,7 +139,6 @@ h4{
 .menu p{
     font-size: 17px;
     line-height: calc(25/17);
-    width: 300px;
     float: left;
     word-break: break-all;
 }
@@ -152,7 +152,7 @@ h4{
 }
 
 .event .pc{
-    padding: 20px;
+    padding: 20px 0;
     border: 4px solid #4F260B;
     background-color: #fff;
 }
@@ -164,8 +164,14 @@ h4{
     gap: 45px;
     margin: 20px;
 }
+.event_list{
+    padding: 0;
+}
 .event a{
     text-decoration: underline;
+}
+.event{
+    padding-bottom: 70px;
 }
 
 iframe{
@@ -410,3 +416,12 @@ h2{
 
 }
 
+.slick-dots{
+    bottom: 0;
+}
+.slick-dots li.slick-active button:before{
+    color: #fff;
+}
+.slick-dots li button:before{
+    color: #fff;
+}
