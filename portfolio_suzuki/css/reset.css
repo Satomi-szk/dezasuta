@@ -22,7 +22,7 @@ dl {
     font-family: "ヒラギノ明朝 ProN W3",  "Hiragino Mincho ProN W3","Hiragino Mincho ProN",  "A1 Mincho", "游明朝", YuMincho,"HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
     font-feature-settings: "palt";
     box-sizing: border-box;
-    background-color: #f5f4e9;
+    /* background-color: #f5f4e9; */
 }
 a {
     /*下線を消す*/

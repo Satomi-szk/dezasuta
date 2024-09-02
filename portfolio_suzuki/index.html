@@ -32,23 +32,27 @@
     <div class="wrapper">
         <header id="header">
             <div class="header__inner">
-                <a href="">
+                <a href="#header">
                     <p>スズキ<br>サトミ</p>
                 </a>
                 <nav class="header__nav">
                     <ul>
-                        <a class="btn-loading" href="">
+                        <a class="btn-loading" href="#profile">
                             <li>私のこと</li>
                         </a>
-                        <a class="btn-loading" href="">
+                        <!-- <span class="btn-loading-circle"></span> -->
+                        <a class="btn-loading" href="#work">
                             <li>作品</li>
                         </a>
-                        <a class="btn-loading" href="">
+                        <!-- <span class="btn-loading-circle"></span> -->
+                        <a class="btn-loading" href="#skill">
                             <li>できること</li>
                         </a>
-                        <a class="btn-loading" href="">
+                        <!-- <span class="btn-loading-circle"></span> -->
+                        <a class="btn-loading" href="#contact">
                             <li>お問い合わせ</li>
                         </a>
+                        <!-- <span class="btn-loading-circle"></span> -->
                     </ul>
                 </nav>
             </div>
@@ -56,7 +60,7 @@
                 <h1 class="title">ツナグデザイン</h1>
                 <div class="top_image"><img src="./images/header_line.png" alt="fv画像"></div>
             </div>
-            <div class="common-navi_controller">
+            <div class="toppage_common-navi_controller">
                 <div class="common-navi_scrollbar">
 
                     <div class="common-page">
@@ -75,14 +79,20 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <a href="https://www.instagram.com/satomiszk_design/"><img src="./images/instagram.png" alt=""></a>
+                <div class="sns">
+                    <div>
+                        <a href="https://x.com/tsunagudesign"><img src="./images/x.png" alt=""></a>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/satomiszk_design/"><img src="./images/instagram.png"
+                                alt=""></a>
+                    </div>
                 </div>
                 <div class="common-navi_copyright">&copy;tsunagu design.</div>
             </div>
         </header>
 
-        <section class="profile">
+        <section id="profile" class="profile">
             <div class="profile_photo">
                 <img src="./images/profile.png" alt="プロフィール写真">
             </div>
@@ -111,40 +121,52 @@
                     これから新しいことに一歩踏み出そうとしている方、デザインに関して<br>
                     お悩みの方、また制作について（料金や時間など）、お気軽にお声掛けください。
                 </p>
-                <a href="" class="button">
+                <a href="#contact" class="button">
                     <span>声を掛けてみる</span>
                 </a>
             </div>
         </section>
 
-        <section class="work">
+        <section id="work" class="work">
             <div class="onimg">
-                <a href=""><img src="./images/work_zoroslim.png" alt=""></a>
-                <div class="cursor"><img src="./images/cursor.png" alt=""></div>
+                <img src="./images/work_zoroslim.png" alt="">
+                <div class="cursor">
+                    <a href="work1.html"><img src="./images/cursor.png" alt=""></a>
+                </div>
             </div>
             <div class="onimg">
-                <a href=""><img src="./images/work_hairsalon.png" alt=""></a>
-                <div class="cursor"><img src="./images/cursor.png" alt=""></div>
+                <img src="./images/work_hairsalon.png" alt="">
+                <div class="cursor">
+                    <a href="work2.html"><img src="./images/cursor.png" alt=""></a>
+                </div>
             </div>
             <div class="onimg">
-                <a href=""><img src="./images/work_cafe.png" alt=""></a>
-                <div class="cursor"><img src="./images/cursor.png" alt=""></div>
+                <img src="./images/work_cafe.png" alt="">
+                <div class="cursor">
+                    <a href="work3.html"><img src="./images/cursor.png" alt=""></a>
+                </div>
             </div>
             <div class="onimg">
-                <a href=""><img src="./images/work_burger.png" alt=""></a>
-                <div class="cursor"><img src="./images/cursor.png" alt=""></div>
+                <img src="./images/work_burger.png" alt="">
+                <div class="cursor">
+                    <a href="work4.html"><img src="./images/cursor.png" alt=""></a>
+                </div>
             </div>
             <div class="onimg">
-                <a href=""><img src="./images/work_programming.png" alt=""></a>
-                <div class="cursor"><img src="./images/cursor.png" alt=""></div>
+                <img src="./images/work_programming.png" alt="">
+                <div class="cursor">
+                    <a href="work5.html"><img src="./images/cursor.png" alt=""></a>
+                </div>
             </div>
             <div class="onimg">
-                <a href=""><img src="./images/work_sportsschool.png" alt=""></a>
-                <div class="cursor"><img src="./images/cursor.png" alt=""></div>
+                <img src="./images/work_sportsschool.png" alt="">
+                <div class="cursor">
+                    <a href="work6.html"><img src="./images/cursor.png" alt=""></a>
+                </div>
             </div>
         </section>
 
-        <section class="skill">
+        <section id="skill" class="skill">
             <div class="skill_box">
                 <div class="sax">
                     <img src="./images/sax.png" alt="">
@@ -154,6 +176,7 @@
                         <p class="subtitle">Web</p>
                         <div class="box1">
                             <p>LP / HP / バナー / サムネイル など</p>
+                            <img src="./images/line_web.png" alt="">
                         </div>
                     </li>
                     <li>
@@ -162,17 +185,21 @@
                             <p>チラシ / ポスター / フライヤー / <br>
                                 名刺 / ショップカード など
                             </p>
+                            <img src="./images/line_graphic.png" alt="">
                         </div>
                     </li>
                     <li>
                         <p class="subtitle">Tool</p>
                         <div class="box3">
-                            <p class="tool_top">Design</p>
-                            <p class="tool">Illustrator / Photoshop / Canva </p>
-                            <p class="tool_top">Coding</p>
-                            <p class="tool">VScode </p>
-                            <p class="tool_top">Other</p>
-                            <p class="tool">GitHub Desktop / zoom / ChatWork</p>
+                            <div class="text">
+                                <p class="tool_top">Design</p>
+                                <p class="tool">Illustrator / Photoshop / Canva </p>
+                                <p class="tool_top">Coding</p>
+                                <p class="tool">VScode </p>
+                                <p class="tool_top">Other</p>
+                                <p class="tool">GitHub Desktop / zoom / ChatWork</p>
+                            </div>
+                            <img src="./images/line_tool.png" alt="">
                         </div>
                     </li>
                 </ul>
@@ -180,16 +207,18 @@
                     <div class="coffee">
                         <img src="./images/coffee.png" alt="">
                     </div>
-                    <p class="postscript">
-                        記載していない事も<br>
-                        柔軟に対応させていただきます。<br>
-                        まずはお気軽にお声掛けください。
-                    </p>
+                    <div class="postscript">
+                        <p>
+                            記載していない事も<br>
+                            柔軟に対応させていただきます。<br>
+                            まずはお気軽にお声掛けください。
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="contact">
+        <section id="contact" class="contact">
             <form class="c-form">
                 <div class="c-form__item">
                     <label class="c-form__label" for="field-name">お名前</label>
@@ -206,7 +235,7 @@
                     <textarea name="entry.1887456883" class="c-form__input" id="field-message"
                         placeholder="例 ） 初めまして。&#13;鈴木太郎と申します。&#13;ご相談できますでしょうか？"></textarea>
                 </div>
-                <p>
+                <p class="attention">
                     ※送信内容の確認画面はありません。<br>
                     内容にお間違いがないかご確認の上、お送りください。
                 </p>
