@@ -10,22 +10,40 @@
     <script>
         (function (d) {
             var config = {
-                kitId: 'clh1tao',
+                kitId: "clh1tao",
                 scriptTimeout: 3000,
-                async: true
+                async: true,
             },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+                h = d.documentElement,
+                t = setTimeout(function () {
+                    h.className =
+                        h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function () {
+                a = this.readyState;
+                if (f || (a && a != "complete" && a != "loaded")) return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config);
+                } catch (e) { }
+            };
+            s.parentNode.insertBefore(tk, s);
         })(document);
     </script>
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery.min.js"></script>
-
 </head>
 
 <body>
@@ -37,60 +55,65 @@
                 </a>
                 <nav class="header__nav">
                     <ul>
-                        <a class="btn-loading" href="#profile">
-                            <li>私のこと</li>
-                        </a>
-                        <!-- <span class="btn-loading-circle"></span> -->
-                        <a class="btn-loading" href="#work">
-                            <li>作品</li>
-                        </a>
-                        <!-- <span class="btn-loading-circle"></span> -->
-                        <a class="btn-loading" href="#skill">
-                            <li>できること</li>
-                        </a>
-                        <!-- <span class="btn-loading-circle"></span> -->
-                        <a class="btn-loading" href="#contact">
-                            <li>お問い合わせ</li>
-                        </a>
-                        <!-- <span class="btn-loading-circle"></span> -->
+                        <li class="btn-loading"><a href="#profile">私のこと</a></li>
+                        <li class="btn-loading"><a href="#work">作品</a></li>
+                        <li class="btn-loading"><a href="#skill">できること</a></li>
+                        <li class="btn-loading"><a href="#contact">お問い合わせ</a></li>
                     </ul>
                 </nav>
             </div>
-            <div class="title_image">
-                <h1 class="title">ツナグデザイン</h1>
-                <div class="top_image"><img src="./images/header_line.png" alt="fv画像"></div>
+            <div class="hamburger">
+                <span></span>
             </div>
-            <div class="toppage_common-navi_controller">
-                <div class="common-navi_scrollbar">
-
-                    <div class="common-page">
-                        <span id="js-works-count">1</span>
-                        <span class="common-page_separator">｜</span>
-                        <span id="js-works-total">5</span>
-                    </div>
-
-                    <div class="common-scrollbar">
-                        <!-- <div class="common-scrollbar_bar" id="js-scroll-bar">
-                        <div class="common-scrollbar_circle" id="js-scroll-circle"></div>
-                    </div> -->
-                        <div class="common-scrollbar_bar" id="js-scroll-bar">
-                            <input type="range" name="scrollbar" min="0" max="100" step="0.5" value="0"
-                                class="common-scrollbar_input" id="js-scroll-input" aria-label="カスタムスクロールバー">
-                        </div>
-                    </div>
-                </div>
-                <div class="sns">
-                    <div>
-                        <a href="https://x.com/tsunagudesign"><img src="./images/x.png" alt=""></a>
-                    </div>
-                    <div>
-                        <a href="https://www.instagram.com/satomiszk_design/"><img src="./images/instagram.png"
-                                alt=""></a>
-                    </div>
-                </div>
-                <div class="common-navi_copyright">&copy;tsunagu design.</div>
-            </div>
+            <nav class="header__nav-sp">
+                <ul>
+                    <li><a href="#profile">私のこと</a></li>
+                    <li><a href="#work">作品</a></li>
+                    <li><a href="#skill">できること</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
         </header>
+        <div class="site-title">
+            <h1 class="title">ツナグデザイン</h1>
+        </div>
+        <section class="mainvisual">
+            <div class="title_image">
+                <div class="top_image">
+                    <img src="./images/header_line.png" alt="fv画像" />
+                </div>
+            </div>
+        </section>
+        <div class="toppage_common-navi_controller">
+            <div class="common-navi_scrollbar">
+                <div class="common-page">
+                    <span id="js-works-count">1</span>
+                    <span class="common-page_separator">｜</span>
+                    <span id="js-works-total">6</span>
+                </div>
+
+                <div class="common-scrollbar">
+                    <div class="common-scrollbar_bar" id="js-scroll-bar">
+                        <input type="range" name="scrollbar" min="0" max="100" step="0.5" value="0"
+                            class="common-scrollbar_input" id="js-scroll-input" aria-label="カスタムスクロールバー" />
+                    </div>
+                </div>
+            </div>
+            <div class="sns">
+                <div>
+                    <a href="https://x.com/tsunagudesign">
+                        <img src="./images/x.png" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/satomiszk_design/">
+                        <img src="./images/instagram.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="common-navi_copyright">&copy;tsunagu design.</div>
+        </div>
+
 
         <section id="profile" class="profile">
             <div class="profile_photo">
@@ -128,91 +151,100 @@
         </section>
 
         <section id="work" class="work">
-            <div class="onimg">
-                <img src="./images/work_zoroslim.png" alt="">
-                <div class="cursor">
-                    <a href="work1.html"><img src="./images/cursor.png" alt=""></a>
+            <div class="work__inner">
+                <div class="onimg">
+                    <img src="./images/work_zoroslim.png" alt="">
+                    <div class="cursor">
+                        <a href="work1.html"><img src="./images/cursor.png" alt=""></a>
+                    </div>
                 </div>
-            </div>
-            <div class="onimg">
-                <img src="./images/work_hairsalon.png" alt="">
-                <div class="cursor">
-                    <a href="work2.html"><img src="./images/cursor.png" alt=""></a>
+                <div class="onimg">
+                    <img src="./images/work_hairsalon.png" alt="">
+                    <div class="cursor">
+                        <a href="work2.html"><img src="./images/cursor.png" alt=""></a>
+                    </div>
                 </div>
-            </div>
-            <div class="onimg">
-                <img src="./images/work_cafe.png" alt="">
-                <div class="cursor">
-                    <a href="work3.html"><img src="./images/cursor.png" alt=""></a>
+                <div class="onimg">
+                    <img src="./images/work_cafe.png" alt="">
+                    <div class="cursor">
+                        <a href="work3.html"><img src="./images/cursor.png" alt=""></a>
+                    </div>
                 </div>
-            </div>
-            <div class="onimg">
-                <img src="./images/work_burger.png" alt="">
-                <div class="cursor">
-                    <a href="work4.html"><img src="./images/cursor.png" alt=""></a>
+                <div class="onimg">
+                    <img src="./images/work_burger.png" alt="">
+                    <div class="cursor">
+                        <a href="work4.html"><img src="./images/cursor.png" alt=""></a>
+                    </div>
                 </div>
-            </div>
-            <div class="onimg">
-                <img src="./images/work_programming.png" alt="">
-                <div class="cursor">
-                    <a href="work5.html"><img src="./images/cursor.png" alt=""></a>
+                <div class="onimg">
+                    <img src="./images/work_programming.png" alt="">
+                    <div class="cursor">
+                        <a href="work5.html"><img src="./images/cursor.png" alt=""></a>
+                    </div>
                 </div>
-            </div>
-            <div class="onimg">
-                <img src="./images/work_sportsschool.png" alt="">
-                <div class="cursor">
-                    <a href="work6.html"><img src="./images/cursor.png" alt=""></a>
+                <div class="onimg">
+                    <img src="./images/work_sportsschool.png" alt="">
+                    <div class="cursor">
+                        <a href="work6.html"><img src="./images/cursor.png" alt=""></a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="skill" class="skill">
-            <div class="skill_box">
-                <div class="sax">
-                    <img src="./images/sax.png" alt="">
-                </div>
-                <ul>
-                    <li>
-                        <p class="subtitle">Web</p>
-                        <div class="box1">
-                            <p>LP / HP / バナー / サムネイル など</p>
-                            <img src="./images/line_web.png" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <p class="subtitle">Graphic</p>
-                        <div class="box2">
-                            <p>チラシ / ポスター / フライヤー / <br>
-                                名刺 / ショップカード など
-                            </p>
-                            <img src="./images/line_graphic.png" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <p class="subtitle">Tool</p>
-                        <div class="box3">
-                            <div class="text">
-                                <p class="tool_top">Design</p>
-                                <p class="tool">Illustrator / Photoshop / Canva </p>
-                                <p class="tool_top">Coding</p>
-                                <p class="tool">VScode </p>
-                                <p class="tool_top">Other</p>
-                                <p class="tool">GitHub Desktop / zoom / ChatWork</p>
-                            </div>
-                            <img src="./images/line_tool.png" alt="">
-                        </div>
-                    </li>
-                </ul>
-                <div class="coffee_postscript">
-                    <div class="coffee">
-                        <img src="./images/coffee.png" alt="">
+            <div class="skill__contents">
+                <div class="skill_box">
+                    <div class="sax">
+                        <img src="./images/sax.png" alt="">
                     </div>
-                    <div class="postscript">
-                        <p>
-                            記載していない事も<br>
-                            柔軟に対応させていただきます。<br>
-                            まずはお気軽にお声掛けください。
-                        </p>
+                    <div class="skill__inner">
+                        <ul>
+                            <li>
+                                <p class="subtitle">Web</p>
+                                <div class="box1">
+                                    <p>LP / HP / バナー / サムネイル など</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="subtitle">Graphic</p>
+                                <div class="box2">
+                                    <p>チラシ / ポスター / フライヤー / <br>
+                                        名刺 / ショップカード など
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="subtitle">Tool</p>
+                                <div class="box3">
+                                    <div class="text">
+                                        <div class="tool__inner">
+                                            <p class="tool_top">Design</p>
+                                            <p class="tool">Illustrator / Photoshop / Canva</p>
+                                        </div>
+                                        <div class="tool__inner">
+                                            <p class="tool_top">Coding</p>
+                                            <p class="tool">VScode</p>
+                                        </div>
+                                        <div class="tool__inner">
+                                            <p class="tool_top">Other</p>
+                                            <p class="tool">GitHub Desktop / zoom / ChatWork</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="postscript">
+                            <p>
+                                記載していない事も<br>
+                                柔軟に対応させていただきます。<br>
+                                まずはお気軽にお声掛けください。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="coffee_postscript">
+                        <div class="coffee">
+                            <img src="./images/coffee.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -236,7 +268,7 @@
                         placeholder="例 ） 初めまして。&#13;鈴木太郎と申します。&#13;ご相談できますでしょうか？"></textarea>
                 </div>
                 <p class="attention">
-                    ※送信内容の確認画面はありません。<br>
+                    ※送信内容の確認画面はありません。<br />
                     内容にお間違いがないかご確認の上、お送りください。
                 </p>
                 <div class="c-form__submit">
@@ -244,9 +276,9 @@
                 </div>
             </form>
             <div class="after-sending">
-                <img src="./images/hands.png" alt="">
+                <img src="./images/hands.png" alt="" />
                 <p>
-                    お問い合わせありがとうございます。<br>
+                    お問い合わせありがとうございます。<br />
                     内容を確認後、ご連絡させていただきます。
                 </p>
             </div>
@@ -254,28 +286,43 @@
     </div>
 
     <script>
-        // 横スクロール
-        // window.addEventListener("load", function () {
-        //     gsap.registerPlugin(ScrollTrigger);
+        // セクションに紐づいて動くバー
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section");
+            const scrollbar = document.getElementById("js-scroll-input");
+            const pageCount = document.getElementById("js-works-count"); // ページ番号表示用
+            const totalPage = document.getElementById("js-works-total"); // 総ページ数表示用
+            const totalSections = sections.length;
 
-        //     let sections = gsap.utils.toArray("section");
+            // 総ページ数の表示を更新
+            totalPage.textContent = totalSections;
 
-        //     gsap.set(wrapper, { width: sections.length * 100 + "%" });
-        //     gsap.set(section, { width: 100 / sections.length + "%" });
+            // 全体のスクロール可能な幅
+            const totalScrollWidth =
+                document.documentElement.scrollWidth - window.innerWidth;
 
-        //     gsap.to(sections, {
-        //         xPercent: -100 * (sections.length - 1),
-        //         ease: "none",
-        //         scrollTrigger: {
-        //             trigger: "section",
-        //             scrub: 1,
-        //             snap: 1 / (sections.length - 1),
-        //             end: "+=8000",
-        //             pin: true,
-        //             scrub: true,
-        //         }
-        //     });
-        // });
+            // スクロール位置に応じてページ番号を更新
+            window.addEventListener("scroll", function () {
+                const scrollLeft = window.scrollX; // 横スクロールの位置を取得
+                const scrollPercentage = (scrollLeft / totalScrollWidth) * 100; // スクロール位置をパーセンテージに変換
+
+                scrollbar.value = scrollPercentage; // スクロールバーの値を更新
+
+                // 現在のセクションを計算してページ番号を更新
+                let currentSectionIndex =
+                    Math.floor(scrollLeft / (totalScrollWidth / totalSections)) + 1;
+                pageCount.textContent = currentSectionIndex; // ページ番号を更新
+            });
+
+            // スクロールバーをドラッグして横スクロールする
+            scrollbar.addEventListener("input", function () {
+                const newScrollLeft = (this.value / 100) * totalScrollWidth; // パーセンテージに応じたスクロール位置を計算
+                window.scrollTo({
+                    left: newScrollLeft,
+                    behavior: "smooth", // スムーズなスクロール
+                });
+            });
+        });
 
         // カーソル
         $(function () {
@@ -285,25 +332,21 @@
         });
 
         $(function () {
-
             var cursor = $("#cursor");
 
-
             $(document).on("mousemove", function (e) {
-
                 var x = e.clientX;
                 var y = e.clientY;
 
                 cursor.css({
-                    "opacity": "1",
-                    "top": y + "px",
-                    "left": x + "px"
+                    opacity: "1",
+                    top: y + "px",
+                    left: x + "px",
                 });
             });
         });
     </script>
 </body>
-
 </html>
 
 
@@ -311,13 +354,3 @@
 
 
 
-<!-- 質問 -->
-<!-- 
-  ◯ナヴィゲーションメニューやアイコンなど、浮かせて配置している要素に背景色が付いてしまいます。
-  ◯btn-loadingの丸をもっと小さく、文字に重なるようにしたいです。
-  ◯スクロールバーの部分をこちらのサイト（https://hi-designinc.com/）からコピペさせて頂きましたが、白い丸の部分を再現できませんでした。
-  ◯スクロールした時にページ数を変える方法を教えて頂きたいです。（上記サイトを参考に見てみましたが、よく分かりませんでした。）
-  ◯できることのページでtoolの文章を改行させたくなかったのでwhite-space: nowrap;をつけたのですが、要素が大きくなり過ぎてしまいます。
-  ◯お問い合わせページのボタンのみ入力部分に対して中央に持ってきたいのですが、うまくできませんでした。
-  ◯背景にこちらのサイト（https://morerevery.net/）のようなザラっとした感じを入れたいです。
-  -->

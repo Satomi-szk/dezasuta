@@ -1,87 +1,111 @@
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>作品2</title>
+    <title>作品</title>
 
     <!-- Adobeフォント読み込み -->
     <script>
         (function (d) {
             var config = {
-                kitId: 'clh1tao',
+                kitId: "clh1tao",
                 scriptTimeout: 3000,
-                async: true
+                async: true,
             },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+                h = d.documentElement,
+                t = setTimeout(function () {
+                    h.className =
+                        h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function () {
+                a = this.readyState;
+                if (f || (a && a != "complete" && a != "loaded")) return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config);
+                } catch (e) { }
+            };
+            s.parentNode.insertBefore(tk, s);
         })(document);
     </script>
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery.min.js"></script>
 </head>
 
-<body>
-    <header id="header">
-        <div class="header__inner">
-            <a href="index.html">
-                <p>スズキ<br>サトミ</p>
-            </a>
-            <nav class="header__nav">
-                <ul>
-                    <a class="btn-loading" href="#profile">
-                        <li>私のこと</li>
-                    </a>
-                    <a class="btn-loading" href="#work">
-                        <li>作品</li>
-                    </a>
-                    <a class="btn-loading" href="#skill">
-                        <li>できること</li>
-                    </a>
-                    <a class="btn-loading" href="#contact">
-                        <li>お問い合わせ</li>
-                    </a>
-                </ul>
-            </nav>
-        </div>
-        <div class="title_image">
+<body class="work-body">
+    <div class="work_wrapper">
+        <header id="header">
+            <div class="header__inner">
+                <a href="#header">
+                    <p>スズキ<br>サトミ</p>
+                </a>
+                <nav class="header__nav">
+                    <ul>
+                        <li class="btn-loading"><a href="#profile">私のこと</a></li>
+                        <li class="btn-loading"><a href="#work">作品</a></li>
+                        <li class="btn-loading"><a href="#skill">できること</a></li>
+                        <li class="btn-loading"><a href="#contact">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="site-title">
             <h1 class="title">ツナグデザイン</h1>
         </div>
+
         <div class="work_common-navi_controller">
             <div class="work_common-navi_scrollbar">
-
-                <div class="common-page">
+                <div class="work_common-page">
                     <span id="js-works-count">1</span>
                     <span class="common-page_separator">｜</span>
                     <span id="js-works-total">5</span>
                 </div>
 
-                <div class="common-scrollbar">
-                    <!-- <div class="common-scrollbar_bar" id="js-scroll-bar">
-                        <div class="common-scrollbar_circle" id="js-scroll-circle"></div>
-                    </div> -->
+                <div class="work_common-scrollbar">
                     <div class="common-scrollbar_bar" id="js-scroll-bar">
                         <input type="range" name="scrollbar" min="0" max="100" step="0.5" value="0"
-                            class="common-scrollbar_input" id="js-scroll-input" aria-label="カスタムスクロールバー">
+                            class="work_common-scrollbar_input" id="js-scroll-input" aria-label="カスタムスクロールバー" />
                     </div>
                 </div>
             </div>
-            <div>
-                <a href="https://x.com/tsunagudesign"><img src="./images/x.png" alt=""></a>
-            </div>
-            <div>
-                <a href="https://www.instagram.com/satomiszk_design/"><img src="./images/instagram.png" alt=""></a>
+            <div class="work_sns">
+                <div>
+                    <a href="https://x.com/tsunagudesign">
+                        <img src="./images/x.png" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/satomiszk_design/">
+                        <img src="./images/instagram.png" alt="">
+                    </a>
+                </div>
             </div>
             <div class="work_common-navi_copyright">&copy;tsunagu design.</div>
         </div>
-    </header>
-    <div class="work_wrapper">
+    </div>
+
+    <div class="work_section">
         <div class="work_text">
             <h3>美容室 / HP</h3>
             <p>
@@ -90,14 +114,56 @@
                 コーポレートカラーのピンクを基調としたシンプルで落ち着きの<br>
                 あるデザインを目指しました。<br>
                 最終目的としては、認知向上からの予約獲得やSNSフォロワーUP<br>
-                なので、予約ボタンを常にサイトの右上に配置し、Footerの赤色の上にSNSのアイコンを目立つように配置しました。
+                なので、予約ボタンを常にサイトの右上に配置し、<br>
+                Footerの赤色の上にSNSのアイコンを目立つように配置しました。
             </p>
         </div>
         <div class="work_image">
-            <img src="./images/hairsalon_fv.png" alt="">
-            <img src="./images/hairsalon_pc.png" alt="">
+            <img class="first" src="./images/hairsalon_fv.png" alt="">
+            <img class="second" src="./images/hairsalon_pc.png" alt="">
         </div>
     </div>
-</body>
 
+
+
+    <script>
+        // セクションに紐づいて動くバー
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section");
+            const scrollbar = document.getElementById("js-scroll-input");
+            const pageCount = document.getElementById("js-works-count"); // ページ番号表示用
+            const totalPage = document.getElementById("js-works-total"); // 総ページ数表示用
+            const totalSections = sections.length;
+
+            // 総ページ数の表示を更新
+            totalPage.textContent = totalSections;
+
+            // 全体のスクロール可能な幅
+            const totalScrollWidth =
+                document.documentElement.scrollWidth - window.innerWidth;
+
+            // スクロール位置に応じてページ番号を更新
+            window.addEventListener("scroll", function () {
+                const scrollLeft = window.scrollX; // 横スクロールの位置を取得
+                const scrollPercentage = (scrollLeft / totalScrollWidth) * 100; // スクロール位置をパーセンテージに変換
+
+                scrollbar.value = scrollPercentage; // スクロールバーの値を更新
+
+                // 現在のセクションを計算してページ番号を更新
+                let currentSectionIndex =
+                    Math.floor(scrollLeft / (totalScrollWidth / totalSections)) + 1;
+                pageCount.textContent = currentSectionIndex; // ページ番号を更新
+            });
+
+            // スクロールバーをドラッグして横スクロールする
+            scrollbar.addEventListener("input", function () {
+                const newScrollLeft = (this.value / 100) * totalScrollWidth; // パーセンテージに応じたスクロール位置を計算
+                window.scrollTo({
+                    left: newScrollLeft,
+                    behavior: "smooth", // スムーズなスクロール
+                });
+            });
+        });
+    </script>
+</body>
 </html>
