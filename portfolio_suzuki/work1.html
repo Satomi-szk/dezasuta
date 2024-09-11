@@ -47,7 +47,7 @@
 </head>
 
 <body class="work-body">
-    <div class="work_wrapper">
+    <div class="wrapper">
         <header id="header">
             <div class="header__inner">
                 <a href="#header">
@@ -75,60 +75,68 @@
             </nav>
         </header>
         <div class="site-title">
-            <h1 class="title">ツナグデザイン</h1>
+            <h1 class="title-pc">ツナグデザイン</h1>
         </div>
 
-        <div class="work_common-navi_controller">
-            <div class="work_common-navi_scrollbar">
-                <div class="work_common-page">
-                    <span id="js-works-count">1</span>
-                    <span class="common-page_separator">｜</span>
-                    <span id="js-works-total">5</span>
-                </div>
 
-                <div class="work_common-scrollbar">
-                    <div class="common-scrollbar_bar" id="js-scroll-bar">
-                        <input type="range" name="scrollbar" min="0" max="100" step="0.5" value="0"
-                            class="work_common-scrollbar_input" id="js-scroll-input" aria-label="カスタムスクロールバー" />
-                    </div>
-                </div>
+        <div class="work_sns">
+            <div class="x-icon">
+                <a href="https://x.com/tsunagudesign">
+                    <img src="./images/x.png" alt="">
+                </a>
             </div>
-            <div class="work_sns">
-                <div>
-                    <a href="https://x.com/tsunagudesign">
-                        <img src="./images/x.png" alt="">
-                    </a>
-                </div>
-                <div>
-                    <a href="https://www.instagram.com/satomiszk_design/">
-                        <img src="./images/instagram.png" alt="">
-                    </a>
-                </div>
+            <div class="insta-icon">
+                <a href="https://www.instagram.com/satomiszk_design/">
+                    <img src="./images/instagram.png" alt="">
+                </a>
             </div>
-            <div class="work_common-navi_copyright">&copy;tsunagu design.</div>
         </div>
+        <div class="work_common-navi_copyright">&copy;tsunagu design.</div>
     </div>
+
 
     <div class="work_section">
-        <div class="work_text">
-            <h3>ダイエットサプリメント | LP</h3>
-            <p>
-                架空のダイエットサプリメントのLPを制作しました。<br>
-                ダイエットに何度も失敗して苦しんでいる女性が、<br>
-                少しでもダイエットを楽しいと思ってもらえるように<br>
-                願いを込めました。<br>
-                明るい気持ちになれるオレンジのカラーと、<br>
-                成分に含まれているレモンを所々に配置したところが<br>
-                ポイントです。
-            </p>
+        <div class="work-pc">
+            <div class="work_text">
+                <h3>ダイエットサプリメント | LP</h3>
+                <p>
+                    架空のダイエットサプリメントのLPを制作しました。<br>
+                    ダイエットに何度も失敗して苦しんでいる女性が、<br>
+                    少しでもダイエットを楽しいと思ってもらえるように<br>
+                    願いを込めました。<br>
+                    明るい気持ちになれるオレンジのカラーと、<br>
+                    成分に含まれているレモンを所々に配置したところが<br>
+                    ポイントです。
+                </p>
+            </div>
+            <div class="work_image">
+                <img class="first" src="./images/zeroslim_fv.png" alt="">
+                <img class="second" src="./images/zeroslim_pc.png" alt="">
+            </div>
         </div>
-        <div class="work_image">
-            <img class="first" src="./images/zeroslim_fv.png" alt="">
-            <img class="second" src="./images/zeroslim_pc.png" alt="">
+
+
+        <div class="work_text">
+            <div class="work-sp">
+                <div class="work_image">
+                    <img class="first" src="./images/zeroslim_fv.png" alt="">
+                </div>
+                <h3>ダイエットサプリメント | LP</h3>
+                <p>
+                    架空のダイエットサプリメントのLPを制作しました。<br>
+                    ダイエットに何度も失敗して苦しんでいる女性が、<br>
+                    少しでもダイエットを楽しいと思ってもらえるように<br>
+                    願いを込めました。<br>
+                    明るい気持ちになれるオレンジのカラーと、<br>
+                    成分に含まれているレモンを所々に配置したところが<br>
+                    ポイントです。
+                </p>
+            </div>
+            <div class="work_image">
+                <img class="second" src="./images/zeroslim_pc.png" alt="">
+            </div>
         </div>
     </div>
-
-
 
     <script>
         // セクションに紐づいて動くバー
@@ -170,10 +178,10 @@
         });
 
         // ハンバーガーメニュー
-            $(".hamburger").on("click", function () {
-                $(".hamburger").toggleClass("open");
-                $(".header__nav-sp").fadeToggle();
-            });
+        $(".hamburger").on("click", function () {
+            $(".hamburger").toggleClass("open");
+            $(".header__nav-sp").fadeToggle();
+        });
     </script>
 </body>
 
